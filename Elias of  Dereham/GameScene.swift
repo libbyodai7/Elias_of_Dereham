@@ -77,7 +77,9 @@ class GameScene: SKScene {
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
             
-            elias.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 400))
+            println("TOUCH")
+            //Needs to be fixed
+            //elias.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 2000))
             
  
         }
