@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18613D641AF789D5005C8256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18613D631AF789D5005C8256 /* AppDelegate.swift */; };
+		18613D661AF789D5005C8256 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18613D651AF789D5005C8256 /* GameScene.sks */; };
+		18613D681AF789D5005C8256 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18613D671AF789D5005C8256 /* GameScene.swift */; };
+		18613D6A1AF789D5005C8256 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18613D691AF789D5005C8256 /* GameViewController.swift */; };
+		18613D6D1AF789D5005C8256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18613D6B1AF789D5005C8256 /* Main.storyboard */; };
+		18613D6F1AF789D5005C8256 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18613D6E1AF789D5005C8256 /* Images.xcassets */; };
+		18613D721AF789D5005C8256 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18613D701AF789D5005C8256 /* LaunchScreen.xib */; };
+		18613D7E1AF789D5005C8256 /* Elias_of__DerehamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18613D7D1AF789D5005C8256 /* Elias_of__DerehamTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18613D781AF789D5005C8256 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18613D561AF789D5005C8256 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18613D5D1AF789D5005C8256;
+			remoteInfo = "Elias of  Dereham";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18613D5E1AF789D5005C8256 /* Elias of  Dereham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elias of  Dereham.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18613D621AF789D5005C8256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18613D631AF789D5005C8256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18613D651AF789D5005C8256 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		18613D671AF789D5005C8256 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		18613D691AF789D5005C8256 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		18613D6C1AF789D5005C8256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18613D6E1AF789D5005C8256 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		18613D711AF789D5005C8256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		18613D771AF789D5005C8256 /* Elias of  DerehamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Elias of  DerehamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18613D7C1AF789D5005C8256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18613D7D1AF789D5005C8256 /* Elias_of__DerehamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elias_of__DerehamTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18613D5B1AF789D5005C8256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18613D741AF789D5005C8256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18613D551AF789D5005C8256 = {
+			isa = PBXGroup;
+			children = (
+				18613D601AF789D5005C8256 /* Elias of  Dereham */,
+				18613D7A1AF789D5005C8256 /* Elias of  DerehamTests */,
+				18613D5F1AF789D5005C8256 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18613D5F1AF789D5005C8256 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18613D5E1AF789D5005C8256 /* Elias of  Dereham.app */,
+				18613D771AF789D5005C8256 /* Elias of  DerehamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18613D601AF789D5005C8256 /* Elias of  Dereham */ = {
+			isa = PBXGroup;
+			children = (
+				18613D631AF789D5005C8256 /* AppDelegate.swift */,
+				18613D651AF789D5005C8256 /* GameScene.sks */,
+				18613D671AF789D5005C8256 /* GameScene.swift */,
+				18613D691AF789D5005C8256 /* GameViewController.swift */,
+				18613D6B1AF789D5005C8256 /* Main.storyboard */,
+				18613D6E1AF789D5005C8256 /* Images.xcassets */,
+				18613D701AF789D5005C8256 /* LaunchScreen.xib */,
+				18613D611AF789D5005C8256 /* Supporting Files */,
+			);
+			path = "Elias of  Dereham";
+			sourceTree = "<group>";
+		};
+		18613D611AF789D5005C8256 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18613D621AF789D5005C8256 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18613D7A1AF789D5005C8256 /* Elias of  DerehamTests */ = {
+			isa = PBXGroup;
+			children = (
+				18613D7D1AF789D5005C8256 /* Elias_of__DerehamTests.swift */,
+				18613D7B1AF789D5005C8256 /* Supporting Files */,
+			);
+			path = "Elias of  DerehamTests";
+			sourceTree = "<group>";
+		};
+		18613D7B1AF789D5005C8256 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18613D7C1AF789D5005C8256 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18613D5D1AF789D5005C8256 /* Elias of  Dereham */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18613D811AF789D5005C8256 /* Build configuration list for PBXNativeTarget "Elias of  Dereham" */;
+			buildPhases = (
+				18613D5A1AF789D5005C8256 /* Sources */,
+				18613D5B1AF789D5005C8256 /* Frameworks */,
+				18613D5C1AF789D5005C8256 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Elias of  Dereham";
+			productName = "Elias of  Dereham";
+			productReference = 18613D5E1AF789D5005C8256 /* Elias of  Dereham.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18613D761AF789D5005C8256 /* Elias of  DerehamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18613D841AF789D5005C8256 /* Build configuration list for PBXNativeTarget "Elias of  DerehamTests" */;
+			buildPhases = (
+				18613D731AF789D5005C8256 /* Sources */,
+				18613D741AF789D5005C8256 /* Frameworks */,
+				18613D751AF789D5005C8256 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18613D791AF789D5005C8256 /* PBXTargetDependency */,
+			);
+			name = "Elias of  DerehamTests";
+			productName = "Elias of  DerehamTests";
+			productReference = 18613D771AF789D5005C8256 /* Elias of  DerehamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18613D561AF789D5005C8256 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Group 7";
+				TargetAttributes = {
+					18613D5D1AF789D5005C8256 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					18613D761AF789D5005C8256 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 18613D5D1AF789D5005C8256;
+					};
+				};
+			};
+			buildConfigurationList = 18613D591AF789D5005C8256 /* Build configuration list for PBXProject "Elias of  Dereham" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18613D551AF789D5005C8256;
+			productRefGroup = 18613D5F1AF789D5005C8256 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18613D5D1AF789D5005C8256 /* Elias of  Dereham */,
+				18613D761AF789D5005C8256 /* Elias of  DerehamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18613D5C1AF789D5005C8256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18613D721AF789D5005C8256 /* LaunchScreen.xib in Resources */,
+				18613D6F1AF789D5005C8256 /* Images.xcassets in Resources */,
+				18613D661AF789D5005C8256 /* GameScene.sks in Resources */,
+				18613D6D1AF789D5005C8256 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18613D751AF789D5005C8256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18613D5A1AF789D5005C8256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18613D681AF789D5005C8256 /* GameScene.swift in Sources */,
+				18613D6A1AF789D5005C8256 /* GameViewController.swift in Sources */,
+				18613D641AF789D5005C8256 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18613D731AF789D5005C8256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18613D7E1AF789D5005C8256 /* Elias_of__DerehamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18613D791AF789D5005C8256 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18613D5D1AF789D5005C8256 /* Elias of  Dereham */;
+			targetProxy = 18613D781AF789D5005C8256 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18613D6B1AF789D5005C8256 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18613D6C1AF789D5005C8256 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18613D701AF789D5005C8256 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18613D711AF789D5005C8256 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18613D7F1AF789D5005C8256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18613D801AF789D5005C8256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18613D821AF789D5005C8256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Elias of  Dereham/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18613D831AF789D5005C8256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Elias of  Dereham/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18613D851AF789D5005C8256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Elias of  DerehamTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elias of  Dereham.app/Elias of  Dereham";
+			};
+			name = Debug;
+		};
+		18613D861AF789D5005C8256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Elias of  DerehamTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elias of  Dereham.app/Elias of  Dereham";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18613D591AF789D5005C8256 /* Build configuration list for PBXProject "Elias of  Dereham" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18613D7F1AF789D5005C8256 /* Debug */,
+				18613D801AF789D5005C8256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18613D811AF789D5005C8256 /* Build configuration list for PBXNativeTarget "Elias of  Dereham" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18613D821AF789D5005C8256 /* Debug */,
+				18613D831AF789D5005C8256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18613D841AF789D5005C8256 /* Build configuration list for PBXNativeTarget "Elias of  DerehamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18613D851AF789D5005C8256 /* Debug */,
+				18613D861AF789D5005C8256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18613D561AF789D5005C8256 /* Project object */;
+}
