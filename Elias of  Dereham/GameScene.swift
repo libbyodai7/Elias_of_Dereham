@@ -9,14 +9,66 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    var elias:SKSpriteNode!
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+    
+    //setup world physics
+    physicsWorld.gravity = CGVector(dx: 0.0, dy: -9.8)
+    
+    //ELIAS STUFF
         
-        self.addChild(myLabel)
+    //load Elias image atlasin
+    let atlas = SKTextureAtlas(named: "eliasimages")
+        
+    //walk cycle create an array of all the images
+    var walkFrames = [AnyObject]()
+        for i in 1 ... 8 {
+            if let texture = atlas.textureNamed("elias00\(i)"){
+            walkFrames.append(texture)
+        }
+    }
+    
+    //Create an Elias Sprite
+    let elias = SKSpriteNode(texture: walkFrames[0] as SKTexture)
+    elias.name = "Elias"
+        
+    //add physics to Elias
+    elias.physicsBody = SKPhysicsBody(rectangleOfSize: elias.size)
+    elias.physicsBody?.dynamic = true
+    elias.physicsBody?.allowsRotation = false
+    elias.physicsBody?.mass = 0.6
+    elias.setScale(0.2)
+    elias.position = CGPoint(x: 1800, y: 2000)
+        
+    //set up walking animation
+        let walkAnimation = SKAction.animateWithTextures(walkFrames, timePerFrame: 0.1, resize: false, restore: false)
+        let repeatAction = SKAction.repeatActionForever(walkAnimation)
+        elias.runAction(repeatAction)
+    
+    //add elias
+    self.addChild(elias)
+        
+        
+    //GROUND
+        let ground = SKSpriteNode(color: UIColor(white: 1.0, alpha: 0), size:CGSize(width: frame.size.width, height: 20))
+        ground.position = CGPoint(x: self.frame.size.width/2, y: 450)
+        ground.physicsBody = SKPhysicsBody(rectangleOfSize: ground.size)
+        ground.physicsBody?.dynamic = false
+        self.addChild(ground)
+        
+        
+        //BACKGROUND
+        let background = SKTexture(imageNamed: "1")
+        //cheap to draw(?)
+        background.filteringMode = SKTextureFilteringMode.Nearest
+        let bgSprite = SKSpriteNode(texture: background)
+        bgSprite.size = frame.size
+        bgSprite.position = CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0)
+        bgSprite.zPosition = -10
+        addChild(bgSprite)
+        
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -25,17 +77,9 @@ class GameScene: SKScene {
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
             
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
+            elias.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 400))
             
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+ 
         }
     }
    

@@ -15,6 +15,30 @@
 		18613D6F1AF789D5005C8256 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18613D6E1AF789D5005C8256 /* Images.xcassets */; };
 		18613D721AF789D5005C8256 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18613D701AF789D5005C8256 /* LaunchScreen.xib */; };
 		18613D7E1AF789D5005C8256 /* Elias_of__DerehamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18613D7D1AF789D5005C8256 /* Elias_of__DerehamTests.swift */; };
+		18613D881AF7AC98005C8256 /* eliasimages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18613D871AF7AC98005C8256 /* eliasimages.atlas */; };
+		18613DA21AF7BD2C005C8256 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D8B1AF7BD2C005C8256 /* 1.png */; };
+		18613DA31AF7BD2C005C8256 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D8C1AF7BD2C005C8256 /* 10.png */; };
+		18613DA41AF7BD2C005C8256 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D8D1AF7BD2C005C8256 /* 11.png */; };
+		18613DA51AF7BD2C005C8256 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D8E1AF7BD2C005C8256 /* 12.png */; };
+		18613DA61AF7BD2C005C8256 /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D8F1AF7BD2C005C8256 /* 13.png */; };
+		18613DA71AF7BD2C005C8256 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D901AF7BD2C005C8256 /* 14.png */; };
+		18613DA81AF7BD2C005C8256 /* 15.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D911AF7BD2C005C8256 /* 15.png */; };
+		18613DA91AF7BD2C005C8256 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D921AF7BD2C005C8256 /* 16.png */; };
+		18613DAA1AF7BD2C005C8256 /* 17.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D931AF7BD2C005C8256 /* 17.png */; };
+		18613DAB1AF7BD2C005C8256 /* 18.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D941AF7BD2C005C8256 /* 18.png */; };
+		18613DAC1AF7BD2C005C8256 /* 19.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D951AF7BD2C005C8256 /* 19.png */; };
+		18613DAD1AF7BD2C005C8256 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D961AF7BD2C005C8256 /* 2.png */; };
+		18613DAE1AF7BD2C005C8256 /* 20.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D971AF7BD2C005C8256 /* 20.png */; };
+		18613DAF1AF7BD2C005C8256 /* 21.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D981AF7BD2C005C8256 /* 21.png */; };
+		18613DB01AF7BD2C005C8256 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D991AF7BD2C005C8256 /* 22.png */; };
+		18613DB11AF7BD2C005C8256 /* 23.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D9A1AF7BD2C005C8256 /* 23.png */; };
+		18613DB21AF7BD2C005C8256 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D9B1AF7BD2C005C8256 /* 3.png */; };
+		18613DB31AF7BD2C005C8256 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D9C1AF7BD2C005C8256 /* 4.png */; };
+		18613DB41AF7BD2C005C8256 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D9D1AF7BD2C005C8256 /* 5.png */; };
+		18613DB51AF7BD2C005C8256 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D9E1AF7BD2C005C8256 /* 6.png */; };
+		18613DB61AF7BD2C005C8256 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613D9F1AF7BD2C005C8256 /* 7.png */; };
+		18613DB71AF7BD2C005C8256 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613DA01AF7BD2C005C8256 /* 8.png */; };
+		18613DB81AF7BD2C005C8256 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613DA11AF7BD2C005C8256 /* 9.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +64,30 @@
 		18613D771AF789D5005C8256 /* Elias of  DerehamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Elias of  DerehamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18613D7C1AF789D5005C8256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18613D7D1AF789D5005C8256 /* Elias_of__DerehamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elias_of__DerehamTests.swift; sourceTree = "<group>"; };
+		18613D871AF7AC98005C8256 /* eliasimages.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = eliasimages.atlas; sourceTree = "<group>"; };
+		18613D8B1AF7BD2C005C8256 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		18613D8C1AF7BD2C005C8256 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		18613D8D1AF7BD2C005C8256 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		18613D8E1AF7BD2C005C8256 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		18613D8F1AF7BD2C005C8256 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
+		18613D901AF7BD2C005C8256 /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
+		18613D911AF7BD2C005C8256 /* 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15.png; sourceTree = "<group>"; };
+		18613D921AF7BD2C005C8256 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
+		18613D931AF7BD2C005C8256 /* 17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 17.png; sourceTree = "<group>"; };
+		18613D941AF7BD2C005C8256 /* 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 18.png; sourceTree = "<group>"; };
+		18613D951AF7BD2C005C8256 /* 19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19.png; sourceTree = "<group>"; };
+		18613D961AF7BD2C005C8256 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		18613D971AF7BD2C005C8256 /* 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20.png; sourceTree = "<group>"; };
+		18613D981AF7BD2C005C8256 /* 21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 21.png; sourceTree = "<group>"; };
+		18613D991AF7BD2C005C8256 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
+		18613D9A1AF7BD2C005C8256 /* 23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 23.png; sourceTree = "<group>"; };
+		18613D9B1AF7BD2C005C8256 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		18613D9C1AF7BD2C005C8256 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		18613D9D1AF7BD2C005C8256 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		18613D9E1AF7BD2C005C8256 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		18613D9F1AF7BD2C005C8256 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		18613DA01AF7BD2C005C8256 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		18613DA11AF7BD2C005C8256 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +132,8 @@
 				18613D631AF789D5005C8256 /* AppDelegate.swift */,
 				18613D651AF789D5005C8256 /* GameScene.sks */,
 				18613D671AF789D5005C8256 /* GameScene.swift */,
+				18613D8A1AF7BD2C005C8256 /* backgrounds */,
+				18613D871AF7AC98005C8256 /* eliasimages.atlas */,
 				18613D691AF789D5005C8256 /* GameViewController.swift */,
 				18613D6B1AF789D5005C8256 /* Main.storyboard */,
 				18613D6E1AF789D5005C8256 /* Images.xcassets */,
@@ -116,6 +166,36 @@
 				18613D7C1AF789D5005C8256 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18613D8A1AF7BD2C005C8256 /* backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				18613D8B1AF7BD2C005C8256 /* 1.png */,
+				18613D8C1AF7BD2C005C8256 /* 10.png */,
+				18613D8D1AF7BD2C005C8256 /* 11.png */,
+				18613D8E1AF7BD2C005C8256 /* 12.png */,
+				18613D8F1AF7BD2C005C8256 /* 13.png */,
+				18613D901AF7BD2C005C8256 /* 14.png */,
+				18613D911AF7BD2C005C8256 /* 15.png */,
+				18613D921AF7BD2C005C8256 /* 16.png */,
+				18613D931AF7BD2C005C8256 /* 17.png */,
+				18613D941AF7BD2C005C8256 /* 18.png */,
+				18613D951AF7BD2C005C8256 /* 19.png */,
+				18613D961AF7BD2C005C8256 /* 2.png */,
+				18613D971AF7BD2C005C8256 /* 20.png */,
+				18613D981AF7BD2C005C8256 /* 21.png */,
+				18613D991AF7BD2C005C8256 /* 22.png */,
+				18613D9A1AF7BD2C005C8256 /* 23.png */,
+				18613D9B1AF7BD2C005C8256 /* 3.png */,
+				18613D9C1AF7BD2C005C8256 /* 4.png */,
+				18613D9D1AF7BD2C005C8256 /* 5.png */,
+				18613D9E1AF7BD2C005C8256 /* 6.png */,
+				18613D9F1AF7BD2C005C8256 /* 7.png */,
+				18613DA01AF7BD2C005C8256 /* 8.png */,
+				18613DA11AF7BD2C005C8256 /* 9.png */,
+			);
+			path = backgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,10 +278,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18613DAB1AF7BD2C005C8256 /* 18.png in Resources */,
+				18613DB61AF7BD2C005C8256 /* 7.png in Resources */,
+				18613DA91AF7BD2C005C8256 /* 16.png in Resources */,
+				18613DAD1AF7BD2C005C8256 /* 2.png in Resources */,
+				18613DAA1AF7BD2C005C8256 /* 17.png in Resources */,
+				18613DAC1AF7BD2C005C8256 /* 19.png in Resources */,
+				18613DB01AF7BD2C005C8256 /* 22.png in Resources */,
 				18613D721AF789D5005C8256 /* LaunchScreen.xib in Resources */,
+				18613DA31AF7BD2C005C8256 /* 10.png in Resources */,
+				18613DB81AF7BD2C005C8256 /* 9.png in Resources */,
+				18613DA71AF7BD2C005C8256 /* 14.png in Resources */,
+				18613DA81AF7BD2C005C8256 /* 15.png in Resources */,
+				18613DAE1AF7BD2C005C8256 /* 20.png in Resources */,
+				18613DB21AF7BD2C005C8256 /* 3.png in Resources */,
 				18613D6F1AF789D5005C8256 /* Images.xcassets in Resources */,
+				18613DB11AF7BD2C005C8256 /* 23.png in Resources */,
+				18613DA51AF7BD2C005C8256 /* 12.png in Resources */,
+				18613DA41AF7BD2C005C8256 /* 11.png in Resources */,
+				18613DAF1AF7BD2C005C8256 /* 21.png in Resources */,
+				18613DA61AF7BD2C005C8256 /* 13.png in Resources */,
+				18613DB31AF7BD2C005C8256 /* 4.png in Resources */,
+				18613DB51AF7BD2C005C8256 /* 6.png in Resources */,
 				18613D661AF789D5005C8256 /* GameScene.sks in Resources */,
+				18613DA21AF7BD2C005C8256 /* 1.png in Resources */,
+				18613DB41AF7BD2C005C8256 /* 5.png in Resources */,
+				18613DB71AF7BD2C005C8256 /* 8.png in Resources */,
 				18613D6D1AF789D5005C8256 /* Main.storyboard in Resources */,
+				18613D881AF7AC98005C8256 /* eliasimages.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +519,7 @@
 				18613D831AF789D5005C8256 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18613D841AF789D5005C8256 /* Build configuration list for PBXNativeTarget "Elias of  DerehamTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +528,7 @@
 				18613D861AF789D5005C8256 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
