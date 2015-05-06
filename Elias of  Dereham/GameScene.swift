@@ -10,7 +10,14 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    //Elias variable
     var elias:SKSpriteNode!
+    
+    //variables needed for smooth scrolling
+    var lastUpdateTime: NSTimeInterval = 0
+    var dt: NSTimeInterval = 0
+    let backgroundMovePointsPerSec: CGFloat = 200
+
     
     override func didMoveToView(view: SKView) {
     
@@ -39,8 +46,8 @@ class GameScene: SKScene {
     elias.physicsBody?.dynamic = true
     elias.physicsBody?.allowsRotation = false
     elias.physicsBody?.mass = 0.6
-    elias.setScale(0.2)
-    elias.position = CGPoint(x: 1800, y: 2000)
+    elias.setScale(0.3)
+    elias.position = CGPoint(x: 500, y: 500)
         
     //set up walking animation
         let walkAnimation = SKAction.animateWithTextures(walkFrames, timePerFrame: 0.1, resize: false, restore: false)
@@ -60,14 +67,13 @@ class GameScene: SKScene {
         
         
         //BACKGROUND
-        let background = SKTexture(imageNamed: "1")
-        //cheap to draw(?)
-        background.filteringMode = SKTextureFilteringMode.Nearest
-        let bgSprite = SKSpriteNode(texture: background)
-        bgSprite.size = frame.size
-        bgSprite.position = CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0)
-        bgSprite.zPosition = -10
-        addChild(bgSprite)
+        let background = backgroundNode()
+        backgroundColor = SKColor.whiteColor() // loads default white background
+        background.anchorPoint = CGPointZero
+        background.position = CGPointZero
+        background.zPosition = -1 // puts img at the back
+        background.name = "background"
+        addChild(background)
         
     }
     
@@ -79,7 +85,7 @@ class GameScene: SKScene {
             
             println("TOUCH")
             //Needs to be fixed
-            //elias.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 2000))
+            //elias.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 500))
             
  
         }
@@ -87,5 +93,56 @@ class GameScene: SKScene {
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        
+        if lastUpdateTime > 0 {
+            dt = currentTime - lastUpdateTime
+        } else {
+            dt = 0
+        }
+        
+        lastUpdateTime = currentTime
+        
+        
+        moveBackground()
+        
+        //moveSprite(elias, velocity: CGPoint(x: 100, y: 0))
+        
+
     }
+    
+    
+    func backgroundNode() -> SKSpriteNode {
+        let backgroundNode = SKSpriteNode()
+        //anchor point is the pivot point
+        // 0 point it bottom left
+        backgroundNode.anchorPoint = CGPointZero
+        
+        //adds in each background sequentially
+        for i in 1  ... 23{
+            let pixelPosition = (i * 2048) - 2048
+            let i = SKSpriteNode(imageNamed: "\(i)")
+            i.anchorPoint = CGPointZero
+            i.position = CGPoint(x: pixelPosition, y: 0)
+            backgroundNode.addChild(i)
+            
+        }
+        
+        
+        //function completion
+        backgroundNode.size = CGSize(width: 47104, height: 1536)
+        return backgroundNode
+        
+        
+    }
+    
+    
+    func moveBackground(){
+        enumerateChildNodesWithName("background") { node, _ in
+            let background = node as SKSpriteNode
+            let backgroundVelocity  = CGPoint(x: -self.backgroundMovePointsPerSec, y: 0)
+            let amountToMove = backgroundVelocity * CGFloat(self.dt)
+            background.position += amountToMove
+        }
+    }
+    
 }
