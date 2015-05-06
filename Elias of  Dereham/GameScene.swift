@@ -55,7 +55,7 @@ override func didMoveToView(view: SKView) {
     addFinishLine()
     
     //Add in Death Line
-        
+    addLoseLine()
     
     
     }
@@ -238,7 +238,19 @@ func spawnObject(){
     
     
 //LOSE GAME LINE
-    
+func addLoseLine(){
+        
+        let lose = SKSpriteNode(color: UIColor.clearColor(), size: CGSize(width: 100, height: frame.height))
+        lose.name = "lose"
+        lose.physicsBody = SKPhysicsBody(rectangleOfSize: lose.size)
+        lose.physicsBody?.dynamic = false
+        lose.physicsBody?.allowsRotation = false
+        lose.physicsBody?.categoryBitMask = finishCategory
+        lose.physicsBody?.collisionBitMask = playerCategory
+        lose.position = CGPoint(x: -100, y:frame.height*0.5)
+        lose.zPosition = 0
+        addChild(lose)
+    }
 
     
 //CHECK COLLISION .. TO FINISH
@@ -254,6 +266,16 @@ func spawnObject(){
         if (contact.bodyA.categoryBitMask & groundCategory) == groundCategory ||
             (contact.bodyB.categoryBitMask & groundCategory) == groundCategory {
                 NSLog("Elias can jump")
+        }
+        
+        if (contact.bodyA.categoryBitMask & finishCategory) == finishCategory ||
+            (contact.bodyB.categoryBitMask & finishCategory) == finishCategory {
+                gameEnd(false)
+        }
+        
+        if (contact.bodyA.categoryBitMask & loseCategory) == loseCategory ||
+            (contact.bodyB.categoryBitMask & loseCategory) == loseCategory {
+                gameEnd(true)
         }
        
             }
