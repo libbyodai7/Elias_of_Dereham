@@ -38,8 +38,9 @@ override func didMoveToView(view: SKView) {
         }
     }
     
+    
     //Create an Elias Sprite
-    let elias = SKSpriteNode(texture: walkFrames[0] as SKTexture)
+    elias = SKSpriteNode(texture: walkFrames[0] as SKTexture)
     elias.name = "Elias"
         
     //add physics to Elias
@@ -94,8 +95,7 @@ override func didMoveToView(view: SKView) {
             let location = touch.locationInNode(self)
             
             println("TOUCH")
-            //Needs to be fixed
-            //elias.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 500))
+            elias.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 600))
             
  
         }
@@ -114,6 +114,8 @@ override func update(currentTime: CFTimeInterval) {
         
         
         moveBackground()
+    
+        checkCollisions()
     
 
     }
@@ -157,7 +159,7 @@ func moveBackground(){
         let barrel = SKSpriteNode(imageNamed: "barrel1")
         barrel.name = "barrel"
         barrel.physicsBody = SKPhysicsBody(rectangleOfSize: barrel.size)
-        barrel.physicsBody?.dynamic = false
+        barrel.physicsBody?.dynamic = true
         barrel.physicsBody?.allowsRotation = false
         barrel.position = CGPoint(x: 1000, y: 500)
         barrel.zPosition = 0
@@ -168,6 +170,23 @@ func moveBackground(){
         barrel.runAction(actionMove)
     }
     
+    func playerHitObject(barrel: SKSpriteNode){
+        println("hit")
+    }
+    
+    
+    func checkCollisions(){
+        var hitObjects: [SKSpriteNode] = []
+        enumerateChildNodesWithName("barrel") {node, _ in
+            let barrel = node as SKSpriteNode
+            if CGRectIntersectsRect(barrel.frame, self.elias.frame) {
+                hitObjects.append(barrel)
+            }
+        }
+        for barrel in hitObjects {
+            playerHitObject(barrel)
+        }
+    }
 
 }
 

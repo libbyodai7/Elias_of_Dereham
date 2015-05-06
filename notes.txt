@@ -34,5 +34,20 @@ func movingSprites() {
 
 let heroCategory: UInt32 = 1 << 0
 
-
+——
 func didbeingContac
+
+
+——
+
+
+   //load Elias image atlasin
+    let atlas = SKTextureAtlas(named: "eliasimages")
+        
+    //walk cycle create an array of all the images
+    var walkFrames = [AnyObject]()
+        for i in 1 ... 8 {
+            if let texture = atlas.textureNamed("elias00\(i)"){
+            walkFrames.append(texture)
+        }
+    }
