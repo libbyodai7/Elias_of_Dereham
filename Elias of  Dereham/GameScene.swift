@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Elias variable
     var elias:SKSpriteNode!
@@ -19,10 +19,11 @@ class GameScene: SKScene {
     let backgroundMovePointsPerSec: CGFloat = 200
 
     
-    override func didMoveToView(view: SKView) {
+override func didMoveToView(view: SKView) {
     
     //setup world physics
     physicsWorld.gravity = CGVector(dx: 0.0, dy: -9.8)
+    physicsWorld.contactDelegate = self
     
     //ELIAS STUFF
         
@@ -56,14 +57,23 @@ class GameScene: SKScene {
     
     //add elias
     self.addChild(elias)
-        
-        
+
     //GROUND
         let ground = SKSpriteNode(color: UIColor(white: 1.0, alpha: 0), size:CGSize(width: frame.size.width, height: 20))
         ground.position = CGPoint(x: self.frame.size.width/2, y: 450)
         ground.physicsBody = SKPhysicsBody(rectangleOfSize: ground.size)
         ground.physicsBody?.dynamic = false
         self.addChild(ground)
+    
+        spawnObject()
+        
+        //Floor for first section
+        //let floor = SKSpriteNode(imageNamed: "floor")
+        //floor.position = CGPoint(x: 1024, y: 768)
+        //floor.physicsBody = SKPhysicsBody(rectangleOfSize: ground.size)
+        //floor.physicsBody?.dynamic = false
+        //floor.zPosition = 0
+        //self.addChild(floor)
         
         
         //BACKGROUND
@@ -74,7 +84,7 @@ class GameScene: SKScene {
         background.zPosition = -1 // puts img at the back
         background.name = "background"
         addChild(background)
-        
+    
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -91,7 +101,7 @@ class GameScene: SKScene {
         }
     }
    
-    override func update(currentTime: CFTimeInterval) {
+override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         
         if lastUpdateTime > 0 {
@@ -104,18 +114,17 @@ class GameScene: SKScene {
         
         
         moveBackground()
-        
-        //moveSprite(elias, velocity: CGPoint(x: 100, y: 0))
-        
+    
 
     }
     
     
-    func backgroundNode() -> SKSpriteNode {
+func backgroundNode() -> SKSpriteNode {
         let backgroundNode = SKSpriteNode()
         //anchor point is the pivot point
         // 0 point it bottom left
         backgroundNode.anchorPoint = CGPointZero
+        backgroundNode.zPosition = -1
         
         //adds in each background sequentially
         for i in 1  ... 23{
@@ -124,25 +133,42 @@ class GameScene: SKScene {
             i.anchorPoint = CGPointZero
             i.position = CGPoint(x: pixelPosition, y: 0)
             backgroundNode.addChild(i)
-            
         }
-        
-        
+    
         //function completion
         backgroundNode.size = CGSize(width: 47104, height: 1536)
         return backgroundNode
-        
-        
     }
     
     
-    func moveBackground(){
-        enumerateChildNodesWithName("background") { node, _ in
+    //scrolls the background
+func moveBackground(){
+        enumerateChildNodesWithName("background")
+            { node, _ in
             let background = node as SKSpriteNode
             let backgroundVelocity  = CGPoint(x: -self.backgroundMovePointsPerSec, y: 0)
             let amountToMove = backgroundVelocity * CGFloat(self.dt)
             background.position += amountToMove
+            }
         }
+    
+    func spawnObject(){
+        //barrel
+        let barrel = SKSpriteNode(imageNamed: "barrel1")
+        barrel.name = "barrel"
+        barrel.physicsBody = SKPhysicsBody(rectangleOfSize: barrel.size)
+        barrel.physicsBody?.dynamic = false
+        barrel.physicsBody?.allowsRotation = false
+        barrel.position = CGPoint(x: 1000, y: 500)
+        barrel.zPosition = 0
+        addChild(barrel)
+        
+        
+        let actionMove = SKAction.moveTo(CGPoint(x: -barrel.size.width/2, y: barrel.position.y), duration: 5.5)
+        barrel.runAction(actionMove)
     }
     
+
 }
+
+

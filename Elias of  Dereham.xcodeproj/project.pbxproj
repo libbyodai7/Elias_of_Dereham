@@ -40,6 +40,9 @@
 		18613DB71AF7BD2C005C8256 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613DA01AF7BD2C005C8256 /* 8.png */; };
 		18613DB81AF7BD2C005C8256 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 18613DA11AF7BD2C005C8256 /* 9.png */; };
 		18E67B4E1AFA4174009919D8 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E67B4D1AFA4174009919D8 /* MyUtils.swift */; };
+		18E67B501AFA4BC5009919D8 /* floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E67B4F1AFA4BC5009919D8 /* floor.png */; };
+		18E67B521AFA50BD009919D8 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E67B511AFA50BD009919D8 /* Object.swift */; };
+		18E67B541AFA5259009919D8 /* obstacles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18E67B531AFA5259009919D8 /* obstacles.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,9 @@
 		18613DA01AF7BD2C005C8256 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		18613DA11AF7BD2C005C8256 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		18E67B4D1AFA4174009919D8 /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
+		18E67B4F1AFA4BC5009919D8 /* floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floor.png; sourceTree = "<group>"; };
+		18E67B511AFA50BD009919D8 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		18E67B531AFA5259009919D8 /* obstacles.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = obstacles.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 		18613D551AF789D5005C8256 = {
 			isa = PBXGroup;
 			children = (
+				18E67B511AFA50BD009919D8 /* Object.swift */,
 				18613D601AF789D5005C8256 /* Elias of  Dereham */,
 				18613D7A1AF789D5005C8256 /* Elias of  DerehamTests */,
 				18613D5F1AF789D5005C8256 /* Products */,
@@ -135,6 +142,7 @@
 				18613D651AF789D5005C8256 /* GameScene.sks */,
 				18613D671AF789D5005C8256 /* GameScene.swift */,
 				18E67B4D1AFA4174009919D8 /* MyUtils.swift */,
+				18E67B531AFA5259009919D8 /* obstacles.atlas */,
 				18613D8A1AF7BD2C005C8256 /* backgrounds */,
 				18613D871AF7AC98005C8256 /* eliasimages.atlas */,
 				18613D691AF789D5005C8256 /* GameViewController.swift */,
@@ -189,6 +197,7 @@
 				18613D971AF7BD2C005C8256 /* 20.png */,
 				18613D981AF7BD2C005C8256 /* 21.png */,
 				18613D991AF7BD2C005C8256 /* 22.png */,
+				18E67B4F1AFA4BC5009919D8 /* floor.png */,
 				18613D9A1AF7BD2C005C8256 /* 23.png */,
 				18613D9B1AF7BD2C005C8256 /* 3.png */,
 				18613D9C1AF7BD2C005C8256 /* 4.png */,
@@ -282,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18613DAB1AF7BD2C005C8256 /* 18.png in Resources */,
+				18E67B501AFA4BC5009919D8 /* floor.png in Resources */,
 				18613DB61AF7BD2C005C8256 /* 7.png in Resources */,
 				18613DA91AF7BD2C005C8256 /* 16.png in Resources */,
 				18613DAD1AF7BD2C005C8256 /* 2.png in Resources */,
@@ -302,6 +312,7 @@
 				18613DAF1AF7BD2C005C8256 /* 21.png in Resources */,
 				18613DA61AF7BD2C005C8256 /* 13.png in Resources */,
 				18613DB31AF7BD2C005C8256 /* 4.png in Resources */,
+				18E67B541AFA5259009919D8 /* obstacles.atlas in Resources */,
 				18613DB51AF7BD2C005C8256 /* 6.png in Resources */,
 				18613D661AF789D5005C8256 /* GameScene.sks in Resources */,
 				18613DA21AF7BD2C005C8256 /* 1.png in Resources */,
@@ -326,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E67B521AFA50BD009919D8 /* Object.swift in Sources */,
 				18613D681AF789D5005C8256 /* GameScene.swift in Sources */,
 				18E67B4E1AFA4174009919D8 /* MyUtils.swift in Sources */,
 				18613D6A1AF789D5005C8256 /* GameViewController.swift in Sources */,

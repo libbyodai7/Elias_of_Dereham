@@ -1,0 +1,38 @@
+func movingSprites() {
+            for child in self.children as [SKNode]
+            {
+                if let sprite = child as? SKSpriteNode
+                {
+                    if sprite.zPosition == 0
+                    {
+                        let strictClosure = { () -> () in
+                            func moveObjectsFromLevel(sprite: SKSpriteNode)
+                            {
+                                let distanceToMove = CGFloat(self.frame.size.width + sprite.size.width)
+                                
+                                let moveObject = SKAction.moveByX(-distanceToMove, y: 0.0, duration: NSTimeInterval(0.01 * distanceToMove))
+                                
+                                let removeObject = SKAction.removeFromParent()
+                                
+                                let moveObjectAndRemove = SKAction.sequence([moveObject, removeObject])
+                                
+                                sprite.runAction(moveObjectAndRemove)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+
+
+
+———
+
+
+let heroCategory: UInt32 = 1 << 0
+
+
+func didbeingContac
