@@ -206,8 +206,17 @@ func moveBackground(){
 //OBJECT SPAWN
  //function to spawn objects (needs work)
 func spawnObject(){
-      object = Object(position: CGPoint(x: 1000, y: 500), texture: SKTexture(imageNamed: "barrel1"), name: "barrel")
-        addChild(object)
+    //creates an array of the objects
+    var objects = [Object]()
+    
+    //creates instances of each object
+    var barrel  = Object(position: CGPoint(x: 1000, y: 500), texture: SKTexture(imageNamed: "barrel1"), name: "barrel")
+    objects.append(barrel)
+    
+    //iterates through the array of objects and adds them to the scene
+    for Object in objects{
+        addChild(Object)
+    }
     }
     
 //JUMPING FUNCTION
