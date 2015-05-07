@@ -28,6 +28,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Object Variable
     var object: Object!
     
+    //creates an array of the objects
+    var objects = [Object]()
+    
+    //variables needed for object movement
+    let objectMovePointsPerSec: CGFloat = 35
+    
     //variables needed for smooth scrolling
     var lastUpdateTime: NSTimeInterval = 0
     var dt: NSTimeInterval = 0
@@ -95,6 +101,10 @@ override func update(currentTime: CFTimeInterval) {
         
         //update functions called here
         moveBackground()
+    
+    for Object in objects{
+        moveObjects()
+    }
     
 
     }
@@ -189,6 +199,18 @@ func moveBackground(){
             background.position += amountToMove
             }
         }
+    
+//SCROLL OBJECTS
+//scrolls objects in the scene
+    func moveObjects(){
+        enumerateChildNodesWithName("object")
+            { node, _ in
+                let object = node as SKSpriteNode
+                let objectVelocity  = CGPoint(x: -self.objectMovePointsPerSec, y: 0)
+                let amountToMove = objectVelocity * CGFloat(self.dt)
+                object.position += amountToMove
+        }
+    }
 
 //BACKGROUND (uses backgroundNode function to iterate through backgrounds)
 //function to add background
@@ -206,17 +228,63 @@ func moveBackground(){
 //OBJECT SPAWN
  //function to spawn objects (needs work)
 func spawnObject(){
-    //creates an array of the objects
-    var objects = [Object]()
     
     //creates instances of each object
-    var barrel  = Object(position: CGPoint(x: 1000, y: 500), texture: SKTexture(imageNamed: "barrel1"), name: "barrel")
-    objects.append(barrel)
+    var o1  = Object(position: CGPoint(x: 8287, y: 500), texture: SKTexture(imageNamed: "blank"), name: "object")
+    objects.append(o1)
+    
+    var o2  = Object(position: CGPoint(x: 10864, y: 500), texture: SKTexture(imageNamed: "barrel1"), name: "object")
+    objects.append(o2)
+    
+    var o3  = Object(position: CGPoint(x: 11556, y: 500), texture: SKTexture(imageNamed: "barrel2"), name: "object")
+    objects.append(o3)
+    
+    var o4  = Object(position: CGPoint(x: 12002, y: 500), texture: SKTexture(imageNamed: "moneyBag"), name: "object")
+    objects.append(o4)
+    
+    var o5  = Object(position: CGPoint(x: 13584, y: 500), texture: SKTexture(imageNamed: "moneyBagPile"), name: "object")
+    objects.append(o5)
+    
+    var o6  = Object(position: CGPoint(x: 14034, y: 500), texture: SKTexture(imageNamed: "sheriff"), name: "object")
+    objects.append(o6)
+    
+    var o7  = Object(position: CGPoint(x: 15000, y: 500), texture: SKTexture(imageNamed: "prisonCart"), name: "object")
+    objects.append(o7)
+    
+    var o8  = Object(position: CGPoint(x: 15800, y: 500), texture: SKTexture(imageNamed: "crate"), name: "object")
+    objects.append(o8)
+    
+    var o9  = Object(position: CGPoint(x: 17426, y: 500), texture: SKTexture(imageNamed: "barrel1"), name: "object")
+    objects.append(o9)
+    
+    var o10  = Object(position: CGPoint(x: 17812, y: 500), texture: SKTexture(imageNamed: "trapDoor"), name: "object")
+    objects.append(o10)
+    
+    var o11  = Object(position: CGPoint(x: 18918, y: 500), texture: SKTexture(imageNamed: "p10o1"), name: "object")
+    objects.append(o11)
+    
+    var o12  = Object(position: CGPoint(x: 19510, y: 500), texture: SKTexture(imageNamed: "p10o2"), name: "object")
+    objects.append(o12)
+    
+    var o13  = Object(position: CGPoint(x: 20090, y: 500), texture: SKTexture(imageNamed: "p10o3"), name: "object")
+    objects.append(o13)
+    
+    var o14  = Object(position: CGPoint(x: 20876, y: 500), texture: SKTexture(imageNamed: "barrel1"), name: "object")
+    objects.append(o14)
+    
+    var o15  = Object(position: CGPoint(x: 21401, y: 500), texture: SKTexture(imageNamed: "barrel2"), name: "object")
+    objects.append(o15)
+    
+    var o16  = Object(position: CGPoint(x: 21577, y: 500), texture: SKTexture(imageNamed: "p11o3"), name: "object")
+    objects.append(o16)
+    
+    var o17  = Object(position: CGPoint(x: 23435, y: 500), texture: SKTexture(imageNamed: "p12o1"), name: "object")
+    objects.append(o17)
     
     //iterates through the array of objects and adds them to the scene
     for Object in objects{
         addChild(Object)
-    }
+        }
     }
     
 //JUMPING FUNCTION

@@ -14,6 +14,8 @@ import SpriteKit
 
 class Object: SKSpriteNode {
     
+    var dt: NSTimeInterval = 0
+    
     //required initializers
     required init (coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -33,11 +35,8 @@ class Object: SKSpriteNode {
         self.physicsBody?.categoryBitMask = objectCategory
         self.physicsBody?.collisionBitMask = playerCategory | groundCategory
         
-        //scrolls objects with the scene
-        let actionMove = SKAction.moveTo(CGPoint(x: -self.size.width/2, y: self.position.y), duration: 5.5)
-        self.runAction(actionMove)
 
     }
     
-   
+
 }
