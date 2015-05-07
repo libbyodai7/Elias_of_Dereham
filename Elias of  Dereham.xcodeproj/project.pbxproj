@@ -94,7 +94,7 @@
 		18613DA11AF7BD2C005C8256 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		18E67B4D1AFA4174009919D8 /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 		18E67B4F1AFA4BC5009919D8 /* floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floor.png; sourceTree = "<group>"; };
-		18E67B511AFA50BD009919D8 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		18E67B511AFA50BD009919D8 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Object.swift; path = ../Object.swift; sourceTree = "<group>"; };
 		18E67B531AFA5259009919D8 /* obstacles.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = obstacles.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +119,6 @@
 		18613D551AF789D5005C8256 = {
 			isa = PBXGroup;
 			children = (
-				18E67B511AFA50BD009919D8 /* Object.swift */,
 				18613D601AF789D5005C8256 /* Elias of  Dereham */,
 				18613D7A1AF789D5005C8256 /* Elias of  DerehamTests */,
 				18613D5F1AF789D5005C8256 /* Products */,
@@ -138,6 +137,7 @@
 		18613D601AF789D5005C8256 /* Elias of  Dereham */ = {
 			isa = PBXGroup;
 			children = (
+				18FFC83B1AFB926200113073 /* Entities */,
 				18613D631AF789D5005C8256 /* AppDelegate.swift */,
 				18613D651AF789D5005C8256 /* GameScene.sks */,
 				18613D671AF789D5005C8256 /* GameScene.swift */,
@@ -208,6 +208,14 @@
 				18613DA11AF7BD2C005C8256 /* 9.png */,
 			);
 			path = backgrounds;
+			sourceTree = "<group>";
+		};
+		18FFC83B1AFB926200113073 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				18E67B511AFA50BD009919D8 /* Object.swift */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

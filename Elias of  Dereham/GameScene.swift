@@ -25,11 +25,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Elias variable
     var elias:SKSpriteNode!
     
+    //Object Variable
+    var object: Object!
+    
     //variables needed for smooth scrolling
     var lastUpdateTime: NSTimeInterval = 0
     var dt: NSTimeInterval = 0
     let backgroundMovePointsPerSec: CGFloat = 200
-
+    
+    //variable to see if Elias can Jump
+    var jumpable: Bool = false
+    
     
 override func didMoveToView(view: SKView) {
     
@@ -61,6 +67,8 @@ override func didMoveToView(view: SKView) {
     }
     
     //jumping feature (needs work)
+    
+    
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
         //needs to make it so player can only jump once elias is on ground
@@ -68,12 +76,10 @@ override func didMoveToView(view: SKView) {
             let location = touch.locationInNode(self)
             
             println("TOUCH")
-            elias.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 600))
             
- 
+            eliasJump()
         }
     }
-  
 //update function
 override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
@@ -119,7 +125,7 @@ override func update(currentTime: CFTimeInterval) {
         elias.physicsBody?.dynamic = true
         elias.physicsBody?.allowsRotation = false
         elias.physicsBody?.mass = 0.6
-        elias.setScale(0.3)
+        elias.setScale(0.2)
         elias.position = CGPoint(x: 500, y: 500)
         
         //set up walking animation
@@ -129,9 +135,8 @@ override func update(currentTime: CFTimeInterval) {
         
         //bitmask operators
         elias.physicsBody?.categoryBitMask = playerCategory
-        elias.physicsBody?.collisionBitMask = groundCategory | objectCategory | finishCategory
-        elias.physicsBody?.contactTestBitMask = groundCategory | objectCategory | finishCategory
-        
+        elias.physicsBody?.collisionBitMask = groundCategory | objectCategory | finishCategory | loseCategory
+        elias.physicsBody?.contactTestBitMask = groundCategory | objectCategory | finishCategory | loseCategory
         //add elias
         addChild(elias)
     }
@@ -199,32 +204,26 @@ func moveBackground(){
     }
 
 //OBJECT SPAWN
- //function to spawn objcts (needs work)
+ //function to spawn objects (needs work)
 func spawnObject(){
-        //barrel
-        let barrel = SKSpriteNode(imageNamed: "barrel1")
-        barrel.name = "barrel"
-        barrel.physicsBody = SKPhysicsBody(rectangleOfSize: barrel.size)
-        barrel.physicsBody?.dynamic = true
-        barrel.physicsBody?.allowsRotation = false
+      object = Object(position: CGPoint(x: 1000, y: 500), texture: SKTexture(imageNamed: "barrel1"), name: "barrel")
+        addChild(object)
+    }
     
-        barrel.physicsBody?.categoryBitMask = objectCategory
-        barrel.physicsBody?.collisionBitMask = playerCategory | groundCategory
-    
-        barrel.position = CGPoint(x: 1000, y: 500)
-        barrel.zPosition = 0
-        addChild(barrel)
-    
-        //moves objects with screen (needs fixing)
-        let actionMove = SKAction.moveTo(CGPoint(x: -barrel.size.width/2, y: barrel.position.y), duration: 5.5)
-        barrel.runAction(actionMove)
+//JUMPING FUNCTION
+//only works if Elias is under a certain y position
+    func eliasJump(){
+        if elias.position.y < 600 {
+        elias.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 600))
+        }
     }
     
     
 //FINISH LINE
+//to be joined with win screen
     func addFinishLine(){
         
-        let finish = SKSpriteNode(color: UIColor.clearColor(), size: CGSize(width: 5.0, height: frame.height))
+        let finish = SKSpriteNode(color: UIColor.clearColor(), size: CGSize(width: 100, height: frame.height))
         finish.name = "finish"
         finish.physicsBody = SKPhysicsBody(rectangleOfSize: finish.size)
         finish.physicsBody?.dynamic = false
@@ -238,6 +237,7 @@ func spawnObject(){
     
     
 //LOSE GAME LINE
+// to be joined with death screen
 func addLoseLine(){
         
         let lose = SKSpriteNode(color: UIColor.clearColor(), size: CGSize(width: 100, height: frame.height))
@@ -266,6 +266,9 @@ func addLoseLine(){
         if (contact.bodyA.categoryBitMask & groundCategory) == groundCategory ||
             (contact.bodyB.categoryBitMask & groundCategory) == groundCategory {
                 NSLog("Elias can jump")
+                jumpable = true
+        } else {
+            jumpable = false
         }
         
         if (contact.bodyA.categoryBitMask & finishCategory) == finishCategory ||
