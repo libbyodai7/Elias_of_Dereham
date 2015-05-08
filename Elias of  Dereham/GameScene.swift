@@ -103,6 +103,8 @@ override func update(currentTime: CFTimeInterval) {
         moveBackground()
     
         moveObjects()
+    
+        moveFinish()
     }
     
     
@@ -193,11 +195,6 @@ func backgroundNode() -> SKSpriteNode {
         objectNode.zPosition = 0
         
         //creates instances of each object
-        
-        var o  = Object(position: CGPoint(x: 2050, y: 500), texture: SKTexture(imageNamed: "barrel1"))
-        objectNode.addChild(o)
-        
-        
         var o1  = Object(position: CGPoint(x: 8350, y: 500), texture: SKTexture(imageNamed: "waterWheel"))
         o1.setScale(0.5)
         objectNode.addChild(o1)
@@ -400,11 +397,22 @@ func moveBackground(){
                 object.position += amountToMove
         }
     }
+    
+//MOVE FINISH
+//moves finish line with the scrolling background
+func moveFinish(){
+    enumerateChildNodesWithName("finish")
+        { node, _ in
+            let finish = node as SKSpriteNode
+            let finishVelocity  = CGPoint(x: -self.backgroundMovePointsPerSec, y: 0)
+            let amountToMove = finishVelocity * CGFloat(self.dt)
+            finish.position += amountToMove
+    }
+}
 
 //BACKGROUND (uses backgroundNode function to iterate through backgrounds)
 //function to add background
     func addBackground(){
-        
         let background = backgroundNode()
         backgroundColor = SKColor.whiteColor() // loads default white background
         background.anchorPoint = CGPointZero
@@ -446,7 +454,7 @@ func moveBackground(){
         finish.physicsBody?.allowsRotation = false
         finish.physicsBody?.categoryBitMask = finishCategory
         finish.physicsBody?.collisionBitMask = playerCategory
-        finish.position = CGPoint(x: 45956, y:frame.height*0.5)
+        finish.position = CGPoint(x: 46080, y:frame.height*0.5)
         finish.zPosition = 0
         addChild(finish)
     }
@@ -461,7 +469,7 @@ func addLoseLine(){
         lose.physicsBody = SKPhysicsBody(rectangleOfSize: lose.size)
         lose.physicsBody?.dynamic = false
         lose.physicsBody?.allowsRotation = false
-        lose.physicsBody?.categoryBitMask = finishCategory
+        lose.physicsBody?.categoryBitMask = loseCategory
         lose.physicsBody?.collisionBitMask = playerCategory
         lose.position = CGPoint(x: -100, y:frame.height*0.5)
         lose.zPosition = 0
@@ -489,12 +497,12 @@ func addLoseLine(){
         
         if (contact.bodyA.categoryBitMask & finishCategory) == finishCategory ||
             (contact.bodyB.categoryBitMask & finishCategory) == finishCategory {
-                gameEnd(false)
+                gameEnd(true)
         }
         
         if (contact.bodyA.categoryBitMask & loseCategory) == loseCategory ||
             (contact.bodyB.categoryBitMask & loseCategory) == loseCategory {
-                gameEnd(true)
+                gameEnd(false)
         }
        
             }
@@ -515,13 +523,14 @@ func gameEnd(didWin:Bool) {
             
             
         } else {
-        NSLog("You lost")
+            NSLog("You lost")
             let gameOverScene = GameOverScene(size: size, won: false)
             gameOverScene.scaleMode = scaleMode
             
             let reveal = SKTransition.crossFadeWithDuration(0.5)
-        
+            
             view?.presentScene(gameOverScene, transition: reveal)
+
         }
     }
 
