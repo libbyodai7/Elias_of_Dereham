@@ -11,15 +11,13 @@ import SpriteKit
 
 class GameViewController: UIViewController{
     
-    @IBOutlet var startGameButton: UIButton!
-    
     override func viewDidLoad(){
     super.viewDidLoad()
     
     
     //Setup Sprite kit View
     let view = self.view as SKView
-    let scene = GameScene(size:CGSize(width: 2048, height: 1536))
+    let scene = MainScreen(size:CGSize(width: 2048, height: 1536))
     view.showsFPS = true
     view.showsNodeCount = true
     view.ignoresSiblingOrder = true
