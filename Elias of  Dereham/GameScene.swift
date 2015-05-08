@@ -103,8 +103,6 @@ override func update(currentTime: CFTimeInterval) {
         moveBackground()
     
         moveObjects()
-    
-
     }
     
     
@@ -448,7 +446,7 @@ func moveBackground(){
         finish.physicsBody?.allowsRotation = false
         finish.physicsBody?.categoryBitMask = finishCategory
         finish.physicsBody?.collisionBitMask = playerCategory
-        finish.position = CGPoint(x: 47000, y:frame.height*0.5)
+        finish.position = CGPoint(x: 45956, y:frame.height*0.5)
         finish.zPosition = 0
         addChild(finish)
     }
@@ -507,8 +505,23 @@ func addLoseLine(){
 func gameEnd(didWin:Bool) {
         if didWin {
             NSLog("You Won")
+            
+            let gameOverScene = GameOverScene(size: size, won: true)
+            gameOverScene.scaleMode = scaleMode
+            
+            let reveal = SKTransition.crossFadeWithDuration(0.5)
+            
+            view?.presentScene(gameOverScene, transition: reveal)
+            
+            
         } else {
         NSLog("You lost")
+            let gameOverScene = GameOverScene(size: size, won: false)
+            gameOverScene.scaleMode = scaleMode
+            
+            let reveal = SKTransition.crossFadeWithDuration(0.5)
+        
+            view?.presentScene(gameOverScene, transition: reveal)
         }
     }
 
