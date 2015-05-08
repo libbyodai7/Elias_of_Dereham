@@ -133,7 +133,7 @@ override func update(currentTime: CFTimeInterval) {
         elias.physicsBody?.dynamic = true
         elias.physicsBody?.allowsRotation = false
         elias.physicsBody?.mass = 0.6
-        elias.setScale(0.2)
+        elias.setScale(0.25)
         elias.position = CGPoint(x: 500, y: 500)
         
         //set up walking animation
@@ -195,7 +195,8 @@ func backgroundNode() -> SKSpriteNode {
         objectNode.zPosition = 0
         
         //creates instances of each object
-        var o1  = Object(position: CGPoint(x: 8287, y: 500), texture: SKTexture(imageNamed: "blank"))
+        var o1  = Object(position: CGPoint(x: 8350, y: 500), texture: SKTexture(imageNamed: "waterWheel"))
+        o1.setScale(0.5)
         objectNode.addChild(o1)
         
         var o2  = Object(position: CGPoint(x: 10864, y: 500), texture: SKTexture(imageNamed: "barrel1"))
@@ -207,10 +208,17 @@ func backgroundNode() -> SKSpriteNode {
         var o4  = Object(position: CGPoint(x: 12002, y: 500), texture: SKTexture(imageNamed: "moneyBag"))
         objectNode.addChild(o4)
         
+        var o4a  = Object(position: CGPoint(x: 13000, y: 500), texture: SKTexture(imageNamed: "moneyBag"))
+        objectNode.addChild(o4a)
+        
+        var o4b  = Object(position: CGPoint(x: 13200, y: 500), texture: SKTexture(imageNamed: "moneyBag"))
+        objectNode.addChild(o4b)
+        
         var o5  = Object(position: CGPoint(x: 13584, y: 500), texture: SKTexture(imageNamed: "moneyBagPile"))
         objectNode.addChild(o5)
         
-        var o6  = Object(position: CGPoint(x: 14034, y: 500), texture: SKTexture(imageNamed: "Sheriff"))
+        var o6  = Object(position: CGPoint(x: 14034, y: 500), texture: SKTexture(imageNamed: "Sherrif"))
+        o6.setScale(0.7)
         objectNode.addChild(o6)
         
         var o7  = Object(position: CGPoint(x: 15000, y: 500), texture: SKTexture(imageNamed: "prisonCart"))
@@ -219,10 +227,16 @@ func backgroundNode() -> SKSpriteNode {
         var o8  = Object(position: CGPoint(x: 15800, y: 500), texture: SKTexture(imageNamed: "crate"))
         objectNode.addChild(o8)
         
+        var o8a  = Object(position: CGPoint(x: 16000, y: 500), texture: SKTexture(imageNamed: "crate"))
+        objectNode.addChild(o8a)
+        
+        var o8b  = Object(position: CGPoint(x: 17000, y: 500), texture: SKTexture(imageNamed: "crate"))
+        objectNode.addChild(o8b)
+        
         var o9  = Object(position: CGPoint(x: 17426, y: 500), texture: SKTexture(imageNamed: "barrel1"))
         objectNode.addChild(o9)
         
-        var o10  = Object(position: CGPoint(x: 17812, y: 500), texture: SKTexture(imageNamed: "trapDoor"))
+        var o10  = Object(position: CGPoint(x: 18000, y: 500), texture: SKTexture(imageNamed: "trapDoor"))
         objectNode.addChild(o10)
         
         var o11  = Object(position: CGPoint(x: 18918, y: 500), texture: SKTexture(imageNamed: "p10o1"))
@@ -244,7 +258,47 @@ func backgroundNode() -> SKSpriteNode {
         objectNode.addChild(o16)
         
         var o17  = Object(position: CGPoint(x: 23435, y: 500), texture: SKTexture(imageNamed: "p12o1"))
+        o17.setScale(2)
         objectNode.addChild(o17)
+        
+        var o18  = Object(position: CGPoint(x: 27000, y: 500), texture: SKTexture(imageNamed: "p12o3"))
+        objectNode.addChild(o18)
+        
+        var o19  = Object(position: CGPoint(x: 27400, y: 500), texture: SKTexture(imageNamed: "p14o2"))
+        objectNode.addChild(o19)
+        
+        var o20  = Object(position: CGPoint(x: 28112, y: 500), texture: SKTexture(imageNamed: "p14o3"))
+        objectNode.addChild(o20)
+        
+        var o21  = Object(position: CGPoint(x: 29300, y: 500), texture: SKTexture(imageNamed: "stones"))
+        objectNode.addChild(o21)
+        
+        var o22  = Object(position: CGPoint(x: 29730, y: 500), texture: SKTexture(imageNamed: "stones"))
+        objectNode.addChild(o22)
+        
+        var o23  = Object(position: CGPoint(x: 30000, y: 500), texture: SKTexture(imageNamed: "p15o3"))
+        objectNode.addChild(o23)
+        
+        var o24  = Object(position: CGPoint(x: 31700, y: 500), texture: SKTexture(imageNamed: "fence"))
+        objectNode.addChild(o24)
+        
+        var o25  = Object(position: CGPoint(x: 32200, y: 500), texture: SKTexture(imageNamed: "fence"))
+        objectNode.addChild(o25)
+        
+        var o26  = Object(position: CGPoint(x: 35846, y: 500), texture: SKTexture(imageNamed: "fence"))
+        objectNode.addChild(o26)
+        
+        var o27  = Object(position: CGPoint(x: 37846, y: 500), texture: SKTexture(imageNamed: "sheep1"))
+        objectNode.addChild(o27)
+        
+        var o28  = Object(position: CGPoint(x: 38346, y: 500), texture: SKTexture(imageNamed: "sheep1"))
+        objectNode.addChild(o28)
+        
+        var o29  = Object(position: CGPoint(x: 38846, y: 500), texture: SKTexture(imageNamed: "sheep1"))
+        objectNode.addChild(o29)
+        
+        var o30  = Object(position: CGPoint(x: 39346, y: 500), texture: SKTexture(imageNamed: "sheep1"))
+        objectNode.addChild(o30)
 
         objectNode.size = CGSize(width: 47104, height: 1536)
         return objectNode
@@ -302,7 +356,7 @@ func moveBackground(){
 //JUMPING FUNCTION
 //only works if Elias is under a certain y position
     func eliasJump(){
-        if elias.position.y < 600 {
+        if elias.position.y < 650 {
         elias.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 600))
         }
     }

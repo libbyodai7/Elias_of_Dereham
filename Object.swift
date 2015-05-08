@@ -29,7 +29,8 @@ class Object: SKSpriteNode {
         //physics for all the obejcts
         self.physicsBody = SKPhysicsBody(rectangleOfSize: self.size)
         self.physicsBody?.dynamic = true
-        self.physicsBody?.allowsRotation = false
+        self.physicsBody?.allowsRotation = true
+        self.physicsBody?.mass = 10
         self.zPosition = 0
         self.physicsBody?.categoryBitMask = objectCategory
         self.physicsBody?.collisionBitMask = playerCategory | groundCategory
