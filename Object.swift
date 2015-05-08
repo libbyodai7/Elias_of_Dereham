@@ -22,10 +22,9 @@ class Object: SKSpriteNode {
     }
     
     //initialisers, allows position texture and name to be inputted
-    init(position: CGPoint, texture: SKTexture, name: String) {
+    init(position: CGPoint, texture: SKTexture) {
         super.init(texture: texture, color: SKColor.whiteColor(), size: texture.size())
         self.position = position
-        self.name = "object"
         
         //physics for all the obejcts
         self.physicsBody = SKPhysicsBody(rectangleOfSize: self.size)
